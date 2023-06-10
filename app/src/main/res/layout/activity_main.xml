@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_color"
+
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:layout_weight="3"
+        app:srcCompat="@drawable/fruits" />
+
+    <TextView
+        android:id="@+id/teamName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="FRUIT INFO"
+        android:textColor="#EE0E2137"
+        android:textSize="45sp" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/slogan"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:fontFamily="sans-serif-medium"-->
+<!--        android:gravity="center"-->
+<!--        android:textColor="#112433"-->
+<!--        android:textSize="20sp" />-->
+</LinearLayout>

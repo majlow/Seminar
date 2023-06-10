@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">DAYLAPHUONGLINH</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_your_mobile_number">Enter your mobile number</string>
+    <string name="_84">+84</string>
+    <string name="_1234567890">1234567890</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="todo">TODO</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="did_not_received_otp">Did not received OTP?</string>
+    <string name="we_will_send_you_an_one_time_password_on_this_mobile_phone_number">We will send you an One Time Password on this mobile phone number.</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="Enter_the_OTP_code" />
+    <string name="enter_the_otp_code">Enter the OTP Code</string>
+    <string name="verify">VERIFY</string>
+    <string name="download_file">Download File</string>
+    <string name="upload_file" />
+    <string name="we_will_send_you_an_one_time_otp_code_on_this_mobile_phone_number">We will send you an one time OTP Code on this mobile phone number</string>
+</resources>

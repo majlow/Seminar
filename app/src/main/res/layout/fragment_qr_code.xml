@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.myapplication.NavigationFragment.QRCodeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/qrcodedicon"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="40dp"
+            android:background="#AADCD7"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_baseline_qr_code_24" />
+
+        <TextView
+            android:id="@+id/qrcodetitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/qrcodedicon"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="QR Code"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextFileName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/qrcodetitle"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="File Name"
+            android:inputType="textPersonName"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/editTextFileName"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/editTextOrigin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/editTextName"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Origin"
+            android:inputType="textLongMessage"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/editTextOrigin"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Feature"
+            android:inputType="textCapCharacters"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextDate"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15dp"
+            android:background="@color/teal_700"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="SUBMIT"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</FrameLayout>
