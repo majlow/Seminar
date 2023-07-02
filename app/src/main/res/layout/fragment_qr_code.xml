@@ -47,10 +47,23 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTextName"
+            android:id="@+id/editTextPhoneNumber"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/editTextFileName"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="5dp"
+            android:ems="10"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Phone Number"
+            android:inputType="textPhonetic"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/editTextPhoneNumber"
             android:layout_centerInParent="true"
             android:layout_marginHorizontal="5dp"
             android:layout_marginTop="5dp"
@@ -58,7 +71,7 @@
             android:fontFamily="@font/poppins_regular"
             android:hint="Name"
             android:inputType="textPersonName"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/editTextOrigin"
@@ -72,10 +85,10 @@
             android:fontFamily="@font/poppins_regular"
             android:hint="Origin"
             android:inputType="textLongMessage"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTextDate"
+            android:id="@+id/editTextFeature"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/editTextOrigin"
@@ -86,13 +99,13 @@
             android:fontFamily="@font/poppins_regular"
             android:hint="Feature"
             android:inputType="textCapCharacters"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/editTextDate"
+            android:layout_below="@+id/editTextFeature"
             android:layout_centerInParent="true"
             android:layout_marginTop="15dp"
             android:background="@color/teal_700"

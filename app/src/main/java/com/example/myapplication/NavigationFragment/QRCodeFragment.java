@@ -46,7 +46,7 @@ import java.util.Objects;
 
 public class QRCodeFragment extends Fragment {
     private View mView;
-    EditText editTextFileName, editTextName, editTextDate, editTextOrigin;
+    EditText editTextFileName, editTextName, editTextFeature, editTextOrigin, editTextPhoneNumber;
     Button submitButton;
     @SuppressLint("SetTextI18n")
 
@@ -58,18 +58,19 @@ public class QRCodeFragment extends Fragment {
         editTextName = mView.findViewById(R.id.editTextName);
 //        editTextTime= editTextTime.findViewById(R.id.editTextTime);
         editTextOrigin = mView.findViewById(R.id.editTextOrigin);
-        editTextDate = mView.findViewById(R.id.editTextDate);
+        editTextFeature = mView.findViewById(R.id.editTextFeature);
         submitButton = mView.findViewById(R.id.button);
         editTextFileName = mView.findViewById(R.id.editTextFileName);
+        editTextPhoneNumber = mView.findViewById(R.id.editTextPhoneNumber);
 
         submitButton.setOnClickListener(view -> {
             String filename = editTextFileName.getText().toString();
             String name = editTextName.getText().toString();
             String origin = editTextOrigin.getText().toString();
-            String feature = editTextDate.getText().toString();
-
+            String feature = editTextFeature.getText().toString();
+            String phonenumber = editTextPhoneNumber.getText().toString();
             try {
-                createPdf(name,origin,feature);
+                createPdf(phonenumber,name,origin,feature);
             }
             catch (FileNotFoundException e){
                 e.printStackTrace();
@@ -78,7 +79,7 @@ public class QRCodeFragment extends Fragment {
         return mView;
     }
 
-    private void createPdf(String name, String origin, String feature) throws FileNotFoundException {
+    private void createPdf(String phonenumber, String name, String origin, String feature) throws FileNotFoundException {
         String pdfPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).toString();
         String filename = editTextFileName.getText().toString();
         File file = new File(pdfPath,filename + ".pdf");
@@ -128,13 +129,16 @@ public class QRCodeFragment extends Fragment {
         table.addCell(new Cell().add(new Paragraph("Date")));
         table.addCell(new Cell().add(new Paragraph(LocalDate.now().format(dateFormatter).toString())));
 
+        table.addCell(new Cell().add(new Paragraph("Contact")));
+        table.addCell(new Cell().add(new Paragraph(phonenumber)));
+
 
         //QRcode generate
         BarcodeQRCode qrCode = new BarcodeQRCode(name+
                 "\n"+origin+"\n"+feature+"\n"+LocalDate.now().format(dateFormatter)+"\n"+LocalTime.now().format(timeFormatter));
         PdfFormXObject qrCodeObject = qrCode.createFormXObject(ColorConstants.BLACK,pdf);
 
-        Image qrCodeImage = new Image(qrCodeObject).setWidth(80).setHorizontalAlignment(HorizontalAlignment.CENTER);
+        Image qrCodeImage = new Image(qrCodeObject).setWidth(120).setHorizontalAlignment(HorizontalAlignment.CENTER);
         document.add(image);
         document.add(productTicket);
         document.add(group);
@@ -143,5 +147,11 @@ public class QRCodeFragment extends Fragment {
         document.add(qrCodeImage);
         document.close();
         Toast.makeText(getContext(), "PDF Created", Toast.LENGTH_SHORT).show();
+        editTextFileName.getText().clear();
+        editTextPhoneNumber.getText().clear();
+        editTextName.getText().clear();
+        editTextOrigin.getText().clear();
+        editTextFeature.getText().clear();
+
     }
 }

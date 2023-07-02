@@ -54,12 +54,12 @@ public class UploadFileFragment extends Fragment {
         intent.setType("*/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
 //        onDataResult(intent);
-        startActivityForResult(Intent.createChooser(intent,"PDF FILE SELECTED"),12);
+        startActivityForResult(Intent.createChooser(intent,"PDF FILE SELECTED"),7);
     }
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == 12 && resultCode == RESULT_OK && data!=null && data.getData()!=null){
+        if(requestCode == 7 && resultCode == RESULT_OK && data!=null && data.getData()!=null){
             Toast.makeText(requireActivity().getApplication(), "PDF FILE SELECTED", Toast.LENGTH_SHORT).show();
             editText.getText().clear();
             editText.setText(data.getDataString()
@@ -73,7 +73,7 @@ public class UploadFileFragment extends Fragment {
                 .progress(true, 0)
                 .build();
         mDialog.show();
-        StorageReference  reference = storageReference.child( System.nanoTime()+".pdf");
+        StorageReference  reference = storageReference.child( System.nanoTime() +".pdf");
         reference.putFile(data).addOnSuccessListener(taskSnapshot -> {
             Task<Uri> uriTask = taskSnapshot.getStorage().getDownloadUrl();
             while (!uriTask.isComplete());
