@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "340108464063",
-    "project_id": "seminar-7a814",
-    "storage_bucket": "seminar-7a814.appspot.com"
+    "project_number": "129964872472",
+    "project_id": "seminar-15d0e",
+    "storage_bucket": "seminar-15d0e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:340108464063:android:dcb8dee0fa7132817e5b0a",
+        "mobilesdk_app_id": "1:129964872472:android:f3a4f0fc9420a05b7d846d",
         "android_client_info": {
           "package_name": "com.example.myapplication"
         }
       },
       "oauth_client": [
         {
-          "client_id": "340108464063-18rr2id3soone92olvtquon3ikbphpke.apps.googleusercontent.com",
+          "client_id": "129964872472-egif8jimuqioiuvbi45ss9q2j6hheeli.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.myapplication",
-            "certificate_hash": "cfdfc6972bae1d4af2483770ccac492c713026bc"
+            "certificate_hash": "9654c3507026f02e964ccb00259e271cf94cef3a"
           }
         },
         {
-          "client_id": "340108464063-5i8btr304s9c5ob9fkibn2t03bgk9056.apps.googleusercontent.com",
+          "client_id": "129964872472-shj41cn03i38i6sqrcm60t6gesg5pag7.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBH0oTIITgx2S9atixPgM7lPj4gfuH6jiI"
+          "current_key": "AIzaSyAzSm7HrTQzLAFKkOQYtcoCKWPyycHgqZc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "340108464063-5i8btr304s9c5ob9fkibn2t03bgk9056.apps.googleusercontent.com",
+              "client_id": "129964872472-shj41cn03i38i6sqrcm60t6gesg5pag7.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
